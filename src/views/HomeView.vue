@@ -4,6 +4,6 @@
 
 <template>
   <main>
-    <h1 class="">Viet dep trai</h1>
+    <h1 class="">Home</h1>
   </main>
 </template>

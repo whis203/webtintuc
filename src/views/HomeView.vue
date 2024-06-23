@@ -64,6 +64,7 @@ export default {
 </script>
 
 <template>
+
 <RouterLink to="/detail" class="text-black text-decoration-none">
   <div class="banner container" >
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -253,6 +254,8 @@ export default {
           </div>
           <button v-if="posts.length > visiblePosts.length" @click="loadMore" class="btn btn-danger mt-3">Tải thêm</button>
   </div>
+ 
+
 </template>
 
 <style scoped>

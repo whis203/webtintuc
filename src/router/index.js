@@ -10,9 +10,47 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: "/about",
-      name: "about",
-      component: () => import("../views/AboutView.vue"),
+      path: "/posts/:postid",
+      name: "postDetail",
+      component: () => import("../views/DetailView.vue"),
+    },
+    {
+      path: "/detail/",
+      name: "Detail",
+      component: () => import("../views/DetailBanner.vue"),
+    },
+    {
+      path: "/news",
+      name: "news",
+      component: () => import("../views/NewsVue.vue"),
+    },
+    {
+      path: "/show",
+      name: "show",
+      component: () => import("../views/ShowView.vue"),
+    },
+    {
+      path: "/profile/account",
+      name: "profile",
+      component: () => import("../views/ProfileView.vue"),
+
+      children: [
+        {
+          path: "info",
+          name: "info",
+          component: () => import("../components/ProfileComponent.vue"),
+        },
+        {
+          path: "changePassword",
+          name: "changePassword",
+          component: () => import("../components/ChangePassComponent.vue"),
+        },
+        {
+          path: "post",
+          name: "post",
+          component: () => import("../components/PostComponent.vue"),
+        },
+      ],
     },
   ],
 });
